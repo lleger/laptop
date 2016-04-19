@@ -1,0 +1,18 @@
+[user]
+	name = Logan Leger
+	email = logan@loganleger.com
+[github]
+	user = lleger
+[push]
+	default = current
+[color]
+	ui = auto
+[core]
+	excludesfile = /Users/loganleger/.gitignore
+	editor = vim
+[merge]
+	ff = only
+[fetch]
+	prune = true
+[rebase]
+	autosquash = true
