@@ -9,7 +9,7 @@ This [bundle file](https://github.com/Homebrew/homebrew-bundle) contains all of
 the [Homebrew](http://brew.sh) packages I use. With Homebrew installed, run the
 following command to install the bundle:
 
-  $ brew bundle
+    $ brew bundle
 
 ## Dotfiles
 

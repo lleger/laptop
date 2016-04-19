@@ -2,11 +2,11 @@
 
 1. Install nginx with Homebrew
 
-  $ brew install nginx
+        $ brew install nginx
 
 2. Install dnsmasq with Homebrew
 
-  $ brew install dnsmasq
+        $ brew install dnsmasq
 
 3. Copy `dev_resolver` to `/etc/resolver`
 
