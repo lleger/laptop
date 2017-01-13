@@ -1,0 +1,18 @@
+# Hide log and tmp directories from search popups and file browser
+
+myExtraExcludes       = "log,tmp,node_modules,build.js"
+excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}"
+excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}"
+excludeInBrowser      = "{$excludeInBrowser,$myExtraExcludes}"
+
+myExtraIncludes       = ".env,.env.local,.gitignore,.buildpacks,.codeclimate.yml,.foreman,.jshintrc,.rspec,.ruby-version,.rubocop.yml"
+includeInFileChooser  = "{$includeInFileChooser,$myExtraIncludes}"
+includeInFolderSearch = "{$includeInFolderSearch,$myExtraIncludes}"
+includeInBrowser      = "{$includeInBrowser,$myExtraIncludes}"
+
+# Treat certain files as plain text
+[ "{README,INSTALL,LICENSE,TODO}" ]
+fileType              = "text.plain"
+
+[ "{.rspec,.ruby-version,.buildpacks,.env,.env.local,.foreman,.gitignore,.jshintrc}" ]
+fileType              = "text.plain"
