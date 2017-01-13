@@ -8,7 +8,7 @@
 
         $ brew install dnsmasq
 
-3. Copy `dev_resolver` to `/etc/resolver`
+3. Copy `dev_resolver` to `/etc/resolver` (create dir if not present)
 
 4. Copy `nginx.conf` and `servers` to `/usr/local/etc/nginx`
 
