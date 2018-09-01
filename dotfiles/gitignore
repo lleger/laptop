@@ -1,2 +1,4 @@
 .tm_properties
 .DS_Store
+.elixir_ls
+.vscode

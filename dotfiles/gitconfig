@@ -10,9 +10,12 @@
 [core]
 	excludesfile = /Users/loganleger/.gitignore
 	editor = vim
+	whitespace = warn
 [merge]
 	ff = only
 [fetch]
 	prune = true
 [rebase]
 	autosquash = true
+[commit]
+	verbose = true

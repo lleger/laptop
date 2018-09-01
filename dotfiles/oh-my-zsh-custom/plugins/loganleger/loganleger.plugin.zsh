@@ -17,13 +17,10 @@ tat() {
 }
 
 # Set Textmate as editor
-export EDITOR='mate -w'
+export EDITOR='code --new-window --wait'
 
 # Disable overzealous zsh auto correct
 unsetopt correct_all
-
-# Jekyll word count
-alias jwc='wc -w * | sort | tail -n6'
 
 # Bundler
 alias b="bundle"
@@ -46,8 +43,12 @@ alias lm='last_migration'
 # Git
 alias logg="git log --graph --oneline --all --decorate --abbrev-commit"
 alias gd='git diff'
+alias gbd='git branch --merged | egrep -v "(^\*|master)" | xargs git branch -d'
 
 # ps
 pss() {
 	ps aux | ag $1
 }
+
+# Save me from myself
+alias rm="trash"
