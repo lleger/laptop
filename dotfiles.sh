@@ -11,6 +11,7 @@ cp dotfiles/gitconfig ~/.gitconfig
 cp dotfiles/gitignore ~/.gitignore
 cp dotfiles/hushlogin ~/.hushlogin
 cp dotfiles/psqlrc ~/.psqlrc
+cp dotfiles/terraformrc ~/.terraformrc
 cp dotfiles/tm_properties ~/.tm_properties
 cp dotfiles/tmux.conf ~/.tmux.conf
 cp dotfiles/vimrc ~/.vimrc
