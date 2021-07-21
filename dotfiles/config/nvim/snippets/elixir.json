@@ -1,0 +1,102 @@
+{
+  "Module Definition": {
+    "prefix": [
+      "defmodule"
+    ],
+    "body": [
+      "defmodule ${1:name} do",
+      "  ${0}",
+      "end"
+    ]
+  },
+  "Module Documentation": {
+    "prefix": [
+      "@moduledoc"
+    ],
+    "body": [
+      "@moduledoc \"\"\"",
+      "  ${1}",
+      "\"\"\"",
+      "${0}"
+    ]
+  },
+  "Function Documentation": {
+    "prefix": [
+      "@doc"
+    ],
+    "body": [
+      "@doc \"\"\"",
+      "  ${1}",
+      "\"\"\"",
+      "  ${0}"
+    ]
+  },
+  "Inspect Term": {
+    "prefix": [
+      "insp"
+    ],
+    "body": "IO.inspect(${1}, label: \"${1}\")${0}"
+  },
+  "Insert IEx.pry/0": {
+    "prefix": "pry",
+    "body": [
+      "require IEx",
+      "IEx.pry()"
+    ],
+    "description": "Insert IEx Pry and set up"
+  },
+  "EEx tag": {
+    "prefix": "et",
+    "body": [
+      "<%= $0 %>"
+    ],
+    "description": "Inserts EEx tag"
+  },
+  "LiveView handle_event/3": {
+    "prefix": "he",
+    "body": [
+      "def handle_event(${1:event}, ${2:params}, ${3:socket}) do",
+      "\t$0",
+      "\t{:noreply, socket}",
+      "end"
+    ]
+  },
+  "LiveView handle_info/2": {
+    "prefix": "hi",
+    "body": [
+      "@impl true",
+      "def handle_info(${1:msg}, ${2:socket}) do",
+      "\t$0",
+      "\t{:noreply, socket}",
+      "end"
+    ]
+  },
+  "Ecto Schema changeset": {
+    "prefix": "changeset",
+    "body": [
+      "@doc \"\"\"",
+      "A `$1` changeset.",
+      "\"\"\"",
+      "@spec changeset(t, map) :: Changeset.t()",
+      "def changeset(schema, attrs) do",
+      "\tschema",
+      "\t|> cast(attrs, [",
+      "\t\t$0",
+      "\t])",
+      "\t$2",
+      "end"
+    ]
+  },
+  "Ecto migration": {
+    "prefix": "defmigration",
+    "body": [
+      "defmodule $1 do",
+      "use Ecto.Migration",
+      "",
+      "\tdef change do",
+      "\t$0",
+      "\tend",
+      "end"
+    ]
+  }
+}

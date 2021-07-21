@@ -12,7 +12,6 @@
   "explorer.openEditors.visible": 0,
   "files.trimTrailingWhitespace": true,
   "editor.wordWrap": "wordWrapColumn",
-  "workbench.colorTheme": "New Moon",
   "window.nativeTabs": true,
   "editor.multiCursorModifier": "alt",
   "search.exclude": {
@@ -25,27 +24,234 @@
   "extensions.ignoreRecommendations": false,
   "workbench.startupEditor": "newUntitledFile",
   "explorer.confirmDelete": false,
-  "workbench.sideBar.location": "left",
   "editor.renderWhitespace": "none",
-  "workbench.activityBar.visible": false,
-  "editor.tabCompletion": true,
+  "editor.tabCompletion": "on",
   "editor.cursorBlinking": "phase",
-  // "files.associations": {
-  //   "*.html.eex": "html"
-  // },
   "emmet.includeLanguages": {
-    "HTML (Eex)": "html"
+    "html-eex": "html",
+    "html.erb": "html"
   },
-  "markdown.extension.toc.unorderedList.marker": "*",
   "[elixir]": {},
   "workbench.list.multiSelectModifier": "alt",
   "explorer.autoReveal": false,
-  "search.location": "panel",
   "window.zoomLevel": 0,
   "window.title": "${dirty}${activeEditorShort}${separator}${rootPath}",
-  "diffEditor.ignoreTrimWhitespace": true,
-  "breadcrumbs.enabled": true
-  // "editor.codeActionsOnSave": {
-  //   "source.organizeImports": true
-  // }
+  "diffEditor.ignoreTrimWhitespace": false,
+  "breadcrumbs.enabled": true,
+  "workbench.colorTheme": "New Moon",
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#f2777a",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "?",
+      "color": "#78aad6",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "//",
+      "color": "#8a8a80",
+      "strikethrough": true,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "todo",
+      "color": "#fca369",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "*",
+      "color": "#99cc99",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "fixme",
+      "color": "#f2777a",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "#",
+      "color": "#99cc99",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "##",
+      "color": "#99cc99",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "iex",
+      "color": "#cccccc",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    },
+    {
+      "tag": "...>",
+      "color": "#cccccc",
+      "strikethrough": false,
+      "backgroundColor": "transparent"
+    }
+  ],
+  "vim.leader": ",",
+  "vim.sneak": true,
+  "vim.easymotion": true,
+  "vim.easymotionMarkerFontFamily": "Fira Code",
+  "vim.easymotionMarkerHeight": 18,
+  "vim.easymotionMarkerWidthPerChar": 8,
+  "vim.easymotionMarkerFontSize": "14",
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["j", "w"],
+      "after": ["<Esc>"],
+      "commands": ["workbench.action.files.save"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["[", "<Space>"],
+      "commands": ["editor.action.insertLineBefore"]
+    },
+    {
+      "before": ["]", "<Space>"],
+      "commands": ["editor.action.insertLineAfter"]
+    },
+    {
+      "before": ["[", "e"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    {
+      "before": ["]", "e"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["<leader>", "t", "t"],
+      "commands": [
+        {
+          "command": "workbench.action.terminal.focus"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "t", "f"],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": "Test Current File"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "t", "n"],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": "Run Nearest Test"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "d", "n"],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": "Debug Nearest Test"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "t", "l"],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": "Run Last Test"
+        }
+      ]
+    },
+    {
+      "before": ["<leader>", "d", "l"],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": "Debug Last Test"
+        }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["<leader>", "w", "w"],
+      "commands": ["editor.emmet.action.wrapWithAbbreviation"]
+    }
+  ],
+  "editor.lineNumbers": "relative",
+  "markdown.extension.preview.autoShowPreviewToSide": true,
+  "markdown.extension.toc.githubCompatibility": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 80
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.wordSeparators": "`~!@%^&*()=+[{]}\\|;:'\",.<>-/?_",
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"]
+  },
+  "terraform.languageServer": {
+    "external": true,
+    "args": ["serve"]
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.leex": "html-eex"
+  },
+  "editor.renderControlCharacters": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html.erb]": {
+    "editor.formatOnSave": false
+  },
+  /**
+   * https://makevscodeawesome.com
+   **/
+  "workbench.activityBar.visible": false,
+  // "workbench.editor.showTabs": false,
+  "workbench.sideBar.location": "right",
+  "editor.wordWrapColumn": 100,
+  // "workbench.statusBar.visible": false,
+  "window.newWindowDimensions": "inherit",
+  "editor.snippetSuggestions": "top",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "diffEditor.renderSideBySide": false
 }

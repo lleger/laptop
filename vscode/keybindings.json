@@ -17,5 +17,85 @@
   {
     "key": "ctrl+g",
     "command": "-workbench.action.gotoLine"
+  },
+  {
+    "key": "cmd+k a",
+    "command": "editor.action.sortLinesAscending"
+  },
+  {
+    "key": "cmd+escape",
+    "command": "references-view.remove"
+  },
+  {
+    "key": "ctrl+shift+.",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "langId": "html-eex",
+      "name": "EEx tag"
+    }
+  },
+
+  /**
+   * Activity Bar
+   **/
+  {
+    "key": "cmd+k e",
+    "command": "workbench.view.explorer"
+  },
+  {
+    "key": "cmd+k g",
+    "command": "workbench.view.scm"
+  },
+  {
+    "key": "cmd+k d",
+    "command": "workbench.view.debug"
+  },
+  {
+    "key": "cmd+k x",
+    "command": "workbench.extensions.action.showInstalledExtensions"
+  },
+
+  /**
+   * Activity Bar
+   **/
+  {
+    "key": "ctrl+shift+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation"
+  },
+  {
+    "key": "cmd+m cmd+i",
+    "command": "editor.emmet.action.balanceIn",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+o",
+    "command": "editor.emmet.action.balanceOut",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+w",
+    "command": "editor.emmet.action.wrapWithAbbreviation",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+m",
+    "command": "editor.emmet.action.matchTag",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+e",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+r",
+    "command": "editor.emmet.action.updateTag",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+m cmd+backspace",
+    "command": "editor.emmet.action.removeTag",
+    "when": "editorTextFocus"
   }
 ]

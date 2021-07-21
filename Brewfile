@@ -1,38 +1,30 @@
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'heroku/brew'
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/cask-fonts"
 
-brew 'asdf'
-brew 'awscli'
-brew 'cloc'
-brew 'ctags'
-brew 'dnsmasq'
-brew 'git'
-brew 'gpg'
-brew 'heroku'
-brew 'httpie'
-brew 'hub'
-brew 'imagemagick'
-brew 'jpegoptim'
-brew 'jq'
-brew 'mkcert'
-brew 'mysql@5.7'
-brew 'ncdu'
-brew 'nginx'
-brew 'packer'
-brew 'pngcrush'
-brew 'postgresql', restart_service: true
-brew 'qt55'
-brew 'redis', restart_service: true
-brew 'shellcheck'
-brew 'ssh-copy-id'
-brew 'telnet'
-brew 'terraform-docs'
-brew 'terraform'
-brew 'the_silver_searcher'
-brew 'tig'
-brew 'tmux'
-brew 'trash'
-brew 'tree'
-brew 'watch'
-brew 'wxmac'
+brew "aptible"
+brew "autoconf" # dep for erlang via asdf
+brew "aws-vault"
+brew "bat"
+brew "direnv"
+brew "font-fira-code-nerd-font"
+brew "fzf"
+brew "gh"
+brew "git"
+brew "gpg" # dep for nodejs via asdf
+brew "jq"
+brew "kitty"
+brew "lsd"
+brew "mysql@5.7" # for WM client
+brew "nvim"
+brew "postgresql"
+brew "rg"
+brew "romkatv/gitstatus/gitstatus" # for zsh prompt
+brew "ssh-copy-id"
+brew "tmux"
+brew "trash"
+brew "wget"
+brew "wxmac" # dep for erlang via asdf
+brew "hashicorp/tap/terraform-ls"
+brew "shellcheck"

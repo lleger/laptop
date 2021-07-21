@@ -1,0 +1,55 @@
+version: 2
+
+tools:
+  mix_credo-lint: &mix_credo-lint
+    lint-command: "MIX_ENV=test mix credo suggest --format=flycheck --read-from-stdin ${INPUT}"
+    lint-stdin: true
+    lint-formats:
+      - '%f:%l:%c: %t: %m'
+      - '%f:%l: %t: %m'
+    lint-category-map:
+      R: N
+      D: I
+      F: E
+      W: W
+    root-markers:
+      - mix.lock
+      - mix.exs
+
+  shellcheck-lint: &shellcheck-lint
+    lint-command: 'shellcheck -f gcc -x -P SCRIPTDIR -'
+    lint-stdin: true
+    lint-formats:
+      - '%f:%l:%c: %t%*[^:]: %m [SC%n]'
+
+  shfmt-format: &shfmt-format
+    format-command: 'shfmt -ln bash -i 2 -bn -ci -sr -kp'
+    format-stdin: true
+
+  eslint-lint: &eslint-lint
+    lint-command: 'npx --no-install eslint -f unix --stdin --stdin-filename ${INPUT}'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    root-markers:
+      - package.json
+      - .eslintrc.js
+      - .eslintrc.yaml
+      - .eslintrc.yml
+      - .eslintrc.json
+    commands:
+      - command: 'npx --no-install eslint --fix ${INPUT}'
+        title: 'eslint fix'
+
+languages:
+  elixir:
+    - <<: *mix_credo-lint
+
+  sh:
+    - <<: *shellcheck-lint
+    - <<: *shfmt-format
+
+  javascript:
+    - <<: *eslint-lint
+
+  typescript:
+    - <<: *eslint-lint

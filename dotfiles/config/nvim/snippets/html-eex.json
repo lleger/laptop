@@ -1,0 +1,16 @@
+{
+  "EEx tag": {
+    "prefix": "et",
+    "body": [
+      "<%= $0 %>"
+    ],
+    "description": "Inserts EEx tag"
+  },
+  "end tag": {
+    "prefix": "end",
+    "body": [
+      "<% end %>"
+    ],
+    "description": "Inserts end tag"
+  }
+}

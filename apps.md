@@ -1,18 +1,40 @@
 # Apps
 
+## 2021 List
+
+1Password
+Boop (AS)
+CleanShot X
+Craft
+Dash
+Deliveries
+Dropbox
+Fantastical
+Google Drive
+Harvest
+Karabiner
+MS Office
+NextDNS
+Octotree
+Postico
+Raycast ?
+Rectangle
+Rize ?
+Slack
+Things
+Tot
+Zoom
+
 ## App Store
 
 - 1Password
-- Agenda
-- Fantastical 2
+- Fantastical
 - Harvest
-- Microsoft Remote Desktop
 - Paw
 - Slack
 - Spark
 - The Unarchiver
 - Things
-- Tweetbot
 - Xcode
 - xScope
 
@@ -23,21 +45,14 @@
 - Dash
 - Docker
 - Dropbox
-- EncryptMe
-- Google Chrome
 - Hazel
 - Keybase
 - Microsoft Office
 - Monitoring Client
 - Postico
-- RescueTime
-- Sketch
-- Spectacle
 - SuperDuper
-- Textmate
 - Transmit
 - TripMode
-- Viscosity
 - VSCode
 - Zoom
 
@@ -45,4 +60,4 @@
 
 - 1Password
 - Octotree
-- React Developer Tools (Chrome Only)
+- Hush
